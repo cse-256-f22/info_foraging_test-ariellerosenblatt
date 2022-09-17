@@ -42,6 +42,30 @@
     </g>
   </svg>
 </div>
+
+<link rel="stylesheet" type="text/html" href="css/header.css">
+
+<script>
+  console.log("2")
+ // When the user scrolls the page, execute myFunction 
+ window.onscroll = function() {setupSticky()};
+ 
+ // Get the header
+ var header = document.getElementById('main-menu-container');
+ console.log(header);
+ 
+ // Get the offset position of the navbar
+ var sticky = header.offsetTop;
+ 
+ // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+ function setupSticky() {
+   if (window.pageYOffset > sticky) {
+     header.classList.add("sticky");
+   } else {
+     header.classList.remove("sticky");
+   }
+ }
+</script>
 <header role="banner">
   <div class="container">
     <a class="site-title" href="files/index.html">Nursery School</a>
@@ -92,7 +116,7 @@
         <a id="apply" href="files/apply.html">Apply</a>
         <a id="forms" href="files/forms.html">Forms</a>
 
-        <a id="parent-resources" href="files/parent_resources.html">Parent Resources</a>
+        <a id="parent-resources" href="files/parent_resources.html">Recommended Reading</a>
       </div>
     </div>
   </div>
